@@ -1,0 +1,3 @@
+vm-list
+storage
+networking
