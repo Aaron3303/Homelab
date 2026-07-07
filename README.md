@@ -6,3 +6,5 @@ Tracking homelab progression
 Current setup:
 
 Plans:
+
+Images
