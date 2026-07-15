@@ -160,3 +160,6 @@ sudo systemctl restart docker
 - This installs Docker directly from Docker's official repository instead of Ubuntu's package repository.
 - Docker docs ubuntu website https://docs.docker.com/engine/install/ubuntu/
 - Reccomended to install on host
+- Adding user to docker group (remove need for sudo)
+  <img width="553" height="279" alt="image" src="https://github.com/user-attachments/assets/6a5b2345-ef83-4b78-8559-24989b5f4bd1" />
+
