@@ -47,7 +47,7 @@ View logs for a specific container:
 
 ```bash
 docker compose logs create-astral -f 
-docker compose logs playit-agent -f
+docker compose logs playit-modpack -f
 ```
 
 ---
