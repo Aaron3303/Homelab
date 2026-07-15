@@ -13,3 +13,7 @@ Images
 ├── BACKUPS.md
 ├── RECOVERY.md
 ├── TODO.md
+
+sudo chown -R aaron33:aaron33 ~/valheim-server/config/worlds_local
+
+sudo chown -R user:group dir/
