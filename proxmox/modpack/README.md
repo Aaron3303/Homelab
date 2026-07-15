@@ -8,7 +8,7 @@ A dedicated **Create: Astral** Minecraft server running in Docker with a Playit 
 
 | Container | Purpose |
 |-----------|---------|
-| `minecraft-server` | Hosts the Create: Astral Minecraft server |
+| `create-astral` | Hosts the Create: Astral Minecraft server |
 | `playit-modpack` | Provides remote access through Playit |
 
 ---
