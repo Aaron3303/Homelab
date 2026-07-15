@@ -1,4 +1,6 @@
 services:
+
+  #include in same compose.yaml file as container running server
   playit-modpack:
     container_name: playit-modpack
     image: pepaondrugs/playitgg-docker:latest
