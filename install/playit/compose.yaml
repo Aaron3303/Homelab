@@ -1,0 +1,9 @@
+services:
+  playit-modpack:
+    container_name: playit-modpack
+    image: pepaondrugs/playitgg-docker:latest
+    volumes:
+      - ./data:/playit #change as needed
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
