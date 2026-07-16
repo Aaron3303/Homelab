@@ -1,6 +1,6 @@
 # ⛏️ Vanilla Minecraft Server (26.2)
 
-A dedicated **Vanilla Minecraft 26.2** server running in Docker with a Playit proxy for secure remote access. :contentReference[oaicite:0]{index=0}
+A dedicated **Vanilla Minecraft 26.2** server running in Docker with a Playit proxy for secure remote access. 
 
 ---
 
@@ -124,7 +124,7 @@ docker attach minecraft-server
 
 ## 📝 Notes
 
-- This server runs **Vanilla Minecraft 26.2**. :contentReference[oaicite:1]{index=1}
+- This server runs **Vanilla Minecraft 26.2**. 
 - World data, configuration, and logs are stored in the `/data` volume.
 - Remote access is handled by the Playit Agent.
 - Docker Compose manages both the Minecraft server and Playit containers.
