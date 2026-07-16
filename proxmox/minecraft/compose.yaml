@@ -1,0 +1,25 @@
+services:
+  mc:
+    image: itzg/minecraft-server:latest
+    pull_policy: daily #maybe change later
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      MEMORY: 3G
+      MOTD: "You know who you are"
+      WHITELIST: "MachineMaker92"
+      OPS: "MachineMaker92"
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - ./data:/data
+    restart: unless-stopped
+
+  playit-docker:
+    container_name: playit-docker
+    image: pepaondrugs/playitgg-docker:latest
+    volumes:
+      - ./playit:/playit
+    restart: unless-stopped
