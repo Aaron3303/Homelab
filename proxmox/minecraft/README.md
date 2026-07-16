@@ -130,4 +130,5 @@ docker attach minecraft-server
 - Docker Compose manages both the Minecraft server and Playit containers.
 - The server is hosted inside a dedicated Proxmox VM.
 - Proxmox VM ip is 192.168.1.128
+- Playit proxy website https://playit.gg/
 - Java memory allocation is configured in the Docker Compose file using the `MEMORY` environment variable.
