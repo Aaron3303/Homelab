@@ -225,3 +225,4 @@ docker exec -it radarr bash
 - Bazarr, Lidarr, and NZBGet are currently installed but not actively used.
 - Container configuration is stored under `/docker`, while media files are stored under `/data`.
 - Proxmox VM ip is 192.168.1.236
+- More information regarding tailscale and truenas can be found in the /install and /truenas directories respectively
