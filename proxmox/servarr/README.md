@@ -68,10 +68,10 @@ docker compose logs -f
 View a specific container:
 
 ```bash
-docker compose logs -f radarr
-docker compose logs -f sonarr
-docker compose logs -f qbittorrent
-docker compose logs -f gluetun
+docker compose logs radarr -f
+docker compose logs sonarr -f
+docker compose logs qbittorrent -f
+docker compose logs gluetun -f
 ```
 
 ---
@@ -224,3 +224,4 @@ docker exec -it radarr bash
 - Jellyfin uses the same `/data` directory to stream media.
 - Bazarr, Lidarr, and NZBGet are currently installed but not actively used.
 - Container configuration is stored under `/docker`, while media files are stored under `/data`.
+- Proxmox VM ip is 192.168.1.236
