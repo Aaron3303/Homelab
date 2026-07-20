@@ -131,6 +131,7 @@ docker exec create-astral rcon-cli- op MachineMaker92
 - World data, configuration, mods, and logs are stored in the `./docker/astral/server` volume.
 - Remote access is handled by the Playit Agent.
 - Docker Compose manages both the Minecraft server and Playit containers.
+- Server icon image must be named "server-icon.png" to be recognized
 - The server is hosted inside a dedicated Proxmox VM.
 - VM ip is 192.168.1.227
 - Java memory allocation is configured in the Docker Compose file using the `MEMORY` environment variable.
