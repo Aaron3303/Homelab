@@ -105,9 +105,62 @@ Navigate to **Machines** and verify that the host appears as an online device.
 
 ---
 
+# 📦 Option 3 - Install Tailscale in a Proxmox LXC
+
+Tailscale can also be installed directly inside a **Proxmox LXC container**. The container must have access to `/dev/net/tun` for Tailscale networking to function.
+
+## 🏗️ Configure the LXC
+
+### 1. Create the LXC Container
+
+Create your LXC container normally through the Proxmox web interface.
+
+---
+
+### 2. Open the Resources Tab
+
+Select the LXC container in Proxmox and open the **Resources** tab.
+
+---
+
+### 3. Add Device Passthrough
+
+Select:
+
+**Add → Device Passthrough**
+
+---
+
+### 4. Add the TUN Device
+
+In the **Add Device** prompt, enter:
+
+```text
+/dev/net/tun
+```
+
+in the **Device Path** field.
+
+Select **Add**.
+
+---
+
+### 5. Restart the Container
+
+If the LXC container is currently running, shut it down and start it again.
+
+This allows `/dev/net/tun` to become available inside the container.
+
+---
+
+### 6. Install Tailscale using Option 2
+
+---
+
 ## 📝 Notes
 
 - Use the **Docker** method for containers that simply need private network access.
 - Use the **Host Installation** method when you need **Tailscale Serve** or other host-level networking features.
 - Vaultwarden in this homelab uses the **Host Installation** method because `tailscale serve` cannot be used from within a Docker container.
 - No router port forwarding is required for either installation method.
+- The `/dev/net/tun` device passthrough is required for Tailscale to function correctly inside the LXC.
