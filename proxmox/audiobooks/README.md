@@ -46,6 +46,100 @@ The API connections allow requests made through ABR to be searched through Prowl
 
 ---
 
+# 🚀 Setup Guide
+
+### 1. Add the Docker Compose File
+
+Copy the `compose.yaml` file into the Audiobooks LXC.
+
+```text
+/docker/audiobooks/
+└── compose.yaml
+```
+
+---
+
+### 2. Start the Containers
+
+From the directory containing `compose.yaml`, run:
+
+```bash
+docker compose up -d
+```
+
+Verify that the containers are running:
+
+```bash
+docker compose ps
+```
+
+---
+
+### 3. Access the Services
+
+Access the services using the LXC's IP address:
+
+**Audiobookshelf**
+
+```text
+http://192.168.1.203:13378
+```
+
+**AudiobookRequest**
+
+```text
+http://192.168.1.203:8000
+```
+
+Complete the initial setup for both services.
+
+---
+
+### 4. Configure API Connections
+
+Configure **AudiobookRequest** to communicate with:
+
+- **Prowlarr** — for searching indexers
+- **Audiobookshelf** — for managing the audiobook library
+
+API keys from the respective services are required to establish the connections.
+
+---
+
+### 5. Configure Storage
+
+Ensure the TrueNAS NFS share is mounted to the Proxmox host and passed through to the LXC at:
+
+```text
+/data
+```
+
+Audiobookshelf should use:
+
+```text
+/data/audiobooks
+```
+
+as its audiobook library.
+
+See the **NAS Storage** section below for the complete Proxmox NFS mount and LXC passthrough configuration.
+
+---
+
+### 6. Configure Remote Access
+
+Tailscale is installed directly on the LXC and provides remote access to the services.
+
+Verify Tailscale is connected:
+
+```bash
+sudo tailscale status
+```
+
+Once connected, the Audiobookshelf and AudiobookRequest services can be accessed through the Tailscale network without opening ports on the router.
+
+---
+
 ## 🌐 Network
 
 The LXC has the following local IP address:
