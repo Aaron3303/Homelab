@@ -1,0 +1,20 @@
+services:
+  glance:
+    container_name: glance
+    image: glanceapp/glance
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+    ports:
+      - 8080:8080
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:2
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"  # This maps the container port "3001" to the host port "3001"
+    volumes:
+      - /path/to/data:/app/data  # Configuring persistent storage
+    environment:
+      - TZ=America/Chicago  # Set the timezone (change to your preferred local timezone so monitoring times are the same)
