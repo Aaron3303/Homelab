@@ -352,3 +352,7 @@ This allows the Audiobookshelf and AudiobookRequest services to be accessed remo
 - AudiobookRequest communicates with Prowlarr and Audiobookshelf using API keys.
 - Remote access is provided through Tailscale.
 - The LXC currently has read/access limitations when modifying NAS files because of the current TrueNAS UID/GID permissions.
+- must use nano `/etc/ssh/sshd_config` and change PermitRootLogin to "yes" and PasswordAuthentication to "yes" if facing permission issues when copying or ssh ing into the server
+
+
+
