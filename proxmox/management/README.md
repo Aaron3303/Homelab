@@ -92,7 +92,7 @@ The Glance dashboard configuration is located at:
 ### 1. Create the Docker Directory
 
 ```bash
-mkdir -p /docker/config
+mkdir -p /docker/monitor
 ```
 
 ---
@@ -102,7 +102,7 @@ mkdir -p /docker/config
 Place the `compose.yaml` file in:
 
 ```text
-/docker/compose.yaml
+/docker/monitor/compose.yaml
 ```
 
 ---
