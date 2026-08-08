@@ -189,6 +189,10 @@ pages:
                 alt-status-codes:
                   - 401
                   - 403
+              - title: Audiobookshelf
+                url: http://192.168.1.203:13378
+                check-url: http://192.168.1.203:13378
+                icon: di:audiobookshelf
               - title: Uptime Kuma
                 url: http://192.168.1.229:3001
                 check-url: http://192.168.1.229:3001
@@ -241,6 +245,15 @@ pages:
                 alt-status-codes:
                   - 401
                   - 403
+
+          - type: monitor
+            cache: 1m
+            title: Audiobooksarr
+            sites:
+              - title: AudioBookRequest
+                url: http://192.168.1.203:8000
+                check-url: http://192.168.1.203:8000
+                icon: sh:audiobookrequest-light
 
       - size: small
         widgets:
