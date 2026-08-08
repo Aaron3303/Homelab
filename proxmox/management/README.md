@@ -244,4 +244,4 @@ docker compose logs -f uptime-kuma
 - Remote access is provided through Tailscale.
 - Tailscale is installed directly on the LXC rather than inside Docker.
 - `/dev/net/tun` is passed through from the Proxmox host to the LXC for Tailscale.
-- - must use nano `/etc/ssh/sshd_config` and change PermitRootLogin to "yes" and PasswordAuthentication to "yes" if facing permission issues when copying or ssh ing into the server
+- must use nano `/etc/ssh/sshd_config` and change PermitRootLogin to "yes" and PasswordAuthentication to "yes" if facing permission issues when copying or ssh ing into the server
