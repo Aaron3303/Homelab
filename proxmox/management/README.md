@@ -234,6 +234,19 @@ docker compose logs -f uptime-kuma
 
 ---
 
+# 🐳 Dockhand
+
+**Dockhand** is used to manage Docker containers and Compose stacks across multiple nodes from a centralized interface.
+
+The setup consists of:
+
+- **Dockhand Server** — the main Dockhand service running on the Management LXC.
+- **Hawser Agents** — lightweight agents installed on external Docker nodes that connect those nodes to the Dockhand server.
+
+This allows Docker containers running on different VMs to be managed from one central location.
+
+---
+
 # 📝 Notes
 
 - The Management LXC is hosted on Proxmox.
