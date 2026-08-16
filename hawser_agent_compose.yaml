@@ -1,0 +1,18 @@
+# Compose for dockhand hawser agent
+# Used for adding external VMs to dockhand service
+services:
+  hawser:
+    image: ghcr.io/finsys/hawser:latest
+    container_name: hawser
+    restart: unless-stopped
+
+    ports:
+      - "2376:2376"
+
+    environment:
+      STACKS_DIR: /opt/hawser-stacks
+      TOKEN: ${HAWSER_TOKEN}
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/hawser-stacks:/opt/hawser-stacks
