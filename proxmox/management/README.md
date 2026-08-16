@@ -245,6 +245,21 @@ The setup consists of:
 
 This allows Docker containers running on different VMs to be managed from one central location.
 
+# 🖥️ Dockhand Server
+
+The Dockhand server runs on the Management LXC.
+
+The server's Docker Compose configuration is located at:
+"proxmox/managment/dockhand/compose.yaml"
+
+# 🔌 Hawser Agent
+
+Each external Docker node that needs to be managed by Dockhand requires its own Hawser agent.
+
+The Hawser agent runs as a Docker container and communicates with the Docker Engine through the Docker socket.
+
+See notes for more
+
 ---
 
 # 📝 Notes
@@ -258,3 +273,5 @@ This allows Docker containers running on different VMs to be managed from one ce
 - Tailscale is installed directly on the LXC rather than inside Docker.
 - `/dev/net/tun` is passed through from the Proxmox host to the LXC for Tailscale.
 - must use nano `/etc/ssh/sshd_config` and change PermitRootLogin to "yes" and PasswordAuthentication to "yes" if facing permission issues when copying or ssh ing into the server
+- The Hawser Agent compose.yaml can be found on the homepage
+- Make sure to configure the HAWSER_TOKEN variable in a .env in the same folder as the compose file
