@@ -75,7 +75,7 @@ Instead, remote access is provided through **Tailscale Serve**, which creates an
 HTTPS Domain to access Vaultwarden:
 
 ```text
-https://vaultwarden.tailfef5f3.ts.net/
+https://vaultwarden-1.tailfef5f3.ts.net/#/vault
 ```
 
 All traffic is encrypted and only authenticated devices on your Tailnet can access the service.
