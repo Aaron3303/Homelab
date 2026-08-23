@@ -152,5 +152,6 @@ docker compose logs vaultwarden -f
 - Tailscale must be installed on the **host operating system** for the `tailscale serve` feature to function correctly.
 - See `install/tailscale/README.md` for the complete installation and configuration guide.
 - Vaultwarden access link genereate by tailscale https://vaultwarden.tailfef5f3.ts.net/
-- Proxmox VM ip is 192.168.1.231
+- Proxmox LXC container ip is 192.168.1.223
+- Tailscale serve command to run in background `tailscale serve --bg 8000`
 
