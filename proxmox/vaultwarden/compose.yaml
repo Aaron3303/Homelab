@@ -4,6 +4,9 @@ services:
     container_name: vaultwarden
     restart: unless-stopped
 
+    environment:
+      - SIGNUPS_ALLOWED=false
+
     volumes:
       - ./vw-data:/data
 
