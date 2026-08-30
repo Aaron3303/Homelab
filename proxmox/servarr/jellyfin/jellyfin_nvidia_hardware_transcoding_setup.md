@@ -1,4 +1,6 @@
-# Jellyfin Hardware Transcoding with NVIDIA GPU Passthrough
+# Jellyfin Hardware Transcoding with NVIDIA GPU Passthrough 
+
+* Document is AI-Generated based on user prompts *
 
 This guide documents the setup used to enable **NVIDIA hardware
 transcoding in Jellyfin** when Jellyfin runs in a Docker container
