@@ -1,5 +1,7 @@
 # Proxmox `nic0` Network Disconnect Troubleshooting
 
+* Document is AI-Generated from user prompts. Not all steps taken *
+
 ## Purpose
 
 This document records the troubleshooting steps taken so far for intermittent network connectivity loss on the Proxmox host.
