@@ -344,6 +344,21 @@ If the hardware hang continues, future investigation may include:
 
 ---
 
+## 13. Updated Configuration
+
+The current offloading configuration is only being tested to determine whether NIC hardware offloading is related to the `e1000e` hardware hang.
+
+If the hardware hang continues, possible solution:
+
+1. Run: nano /etc/network/interfaces
+2. Add "post-up ethtool -K nic0 gso off tso off rxvlan off txvlan off gro off tx off rx off sg off" under "iface nic0 inet manual"
+3. Run: ifreload -a
+4. Verify by running: ethtool -k nic0 | grep -E 'tcp-seg|generic-seg|generic-receive|rx-vlan|tx-vlan|scatter'
+5. <img width="925" height="733" alt="image" src="https://github.com/user-attachments/assets/b66fe0ea-a808-428c-a4aa-839ad3b5b48e" />
+
+
+---
+
 ## Useful Commands
 
 ### Check NIC hardware
