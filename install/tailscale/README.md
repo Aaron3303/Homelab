@@ -164,3 +164,5 @@ This allows `/dev/net/tun` to become available inside the container.
 - Vaultwarden in this homelab uses the **Host Installation** method because `tailscale serve` cannot be used from within a Docker container.
 - No router port forwarding is required for either installation method.
 - The `/dev/net/tun` device passthrough is required for Tailscale to function correctly inside the LXC.
+- For tailscale serve (https cert) run "tailscale serve --bg 'port number'" to have it running persistently.
+- User "tailscale serve off" to stop
