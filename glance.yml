@@ -1,8 +1,13 @@
 theme:
-  background-color: 0 0 16
-  primary-color: 43 59 81
-  positive-color: 61 66 44
-  negative-color: 6 96 59
+  theme:
+  background-color: 225 14 15
+  primary-color: 157 47 65
+  contrast-multiplier: 1.1
+
+ # background-color: 0 0 16
+ # primary-color: 43 59 81
+ # positive-color: 61 66 44
+ # negative-color: 6 96 59
 
 pages:
   - name: Startpage
@@ -198,21 +203,33 @@ pages:
                 check-url: http://192.168.1.229:3001
                 icon: di:uptime-kuma
               - title: Vaultwarden
-                url: https://vaultwarden.tailfef5f3.ts.net/#/vault
-                check-url: http://192.168.1.231:8000
+                url: https://vaultwarden-1.tailfef5f3.ts.net/#/vault
+                check-url: http://192.168.1.223:8000
                 icon: di:vaultwarden-light
-              - title: Tailscale
-                url: https://console.tailscale.com/admin/machines?refreshed=true
-                check-url: https://console.tailscale.com/admin/machines?refreshed=true
-                icon: di:tailscale-light
-              - title: Playit
-                url: https://playit.gg/account/agents
-                check-url: https://playit.gg/account/agents
-                icon: sh:playit-gg
-              - title: AirVPN
-                url: https://airvpn.org/client/
-                check-url: https://airvpn.org/client/
-                icon: di:airvpn
+              - title: Adguard
+                url: http://192.168.1.200/#
+                check-url: http://192.168.1.200/#
+                icon: di:adguard-home
+              - title: Actual Budget
+                url: https://actualbudget.tailfef5f3.ts.net/
+                check-url: http://192.168.1.133:5006
+                icon: di:actual-budget
+              - title: Nginx Proxy Manager
+                url: http://192.168.1.173:81
+                check-url: http://192.168.1.173:81
+                icon: di:nginx-proxy-manager
+              - title: Dockhand
+                url: http://192.168.1.229:3000
+                check-url: http://192.168.1.229:3000
+                icon: sh:dockhand
+              - title: Atlas Diagram
+                url: http://192.168.1.229:8082
+                check-url: http://192.168.1.229:8082
+                icon: di:atlassian
+              - title: Mousehole
+                url: http://192.168.1.236:5010
+                check-url: http://192.168.1.236:5010
+                icon: sh:mousehole-light
 
           - type: monitor
             cache: 1m
@@ -254,6 +271,23 @@ pages:
                 url: http://192.168.1.203:8000
                 check-url: http://192.168.1.203:8000
                 icon: sh:audiobookrequest-light
+
+          - type: monitor
+            cache: 1m
+            title: Not Hosted Apps
+            sites:
+              - title: Tailscale
+                url: https://console.tailscale.com/admin/machines?refreshed=true
+                check-url: https://console.tailscale.com/admin/machines?refreshed=true
+                icon: di:tailscale-light
+              - title: Playit
+                url: https://playit.gg/account/agents
+                check-url: https://playit.gg/account/agents
+                icon: sh:playit-gg
+              - title: AirVPN
+                url: https://airvpn.org/client/
+                check-url: https://airvpn.org/client/
+                icon: di:airvpn
 
       - size: small
         widgets:
